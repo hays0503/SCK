@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import sck from '/sck-logo.svg'
@@ -20,7 +19,7 @@ function App() {
           <img src={viteLogo} className={`${style.logo} ${style.react}`}  alt="Vite logo"/>
         </a>
       </div>
-      <h1>Тестирование интеграции</h1>
+      <h1>Тестирование интеграций</h1>
       <div className={style.readTheDocs}>
         <h3>
           <a href='https://m.binotel.kz/'>Binotel</a> + <a href='https://www.jivosite.com/'>Jivosite</a> 
