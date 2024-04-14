@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw; // Исправлено
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.spinerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #888;
+  border-radius: 50%;
+  width: 300px; // Исправлено
+  height: 300px; // Исправлено
+  color: black;
+  font-size: 1.1rem;
+  a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline block;
+  }
+
+  @keyframes move {
+    100%{
+      offset-distance: 100%;
+    }
+  }  
+
+  a:nth-of-type(1) {
+    offset-path: path('M56,33.12A150,150,0,1,1,0,150,149.34,149.34,0,0,1,56,33.12');    
+    animation: move 5s linear infinite;
+    offset-rotate: 0deg;
+  }
+
+  a:nth-of-type(2) {
+    offset-path: path('M 299.883 148.865 C 299.883 231.513 194.841 350.713 73.31 271.449 C -48.221 192.185 11.379 98.017 16.776 82.897 C 22.173 67.777 71.937 -1.809 154.585 -1.809 C 237.233 -1.809 299.883 66.217 299.883 148.865 Z');    
+    animation: move 5s linear infinite;        
+    offset-rotate: 0deg;
+  }
+
+  a:nth-of-type(3) {
+    
+    offset-path: path('M 73.448 270.631 C -3.867 231.067 0.431 150.338 12.669 90.792 C 24.907 31.246 147.088 -54.864 243.711 26.62 C 340.334 108.104 288.596 208.572 262.078 245.834 C 235.56 283.096 150.763 310.195 73.448 270.631 Z');
+    animation: move 5s linear infinite;
+    offset-rotate: 0deg;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+  &.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
